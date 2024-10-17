@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jersey 15';
+}
+
+#header-container{
+    background-color: #4B514E;
+    height: 7.4vh;
+    display: flex;
+    align-items: center;
+    border-bottom: #292929 solid 3px;
+}
+
+.header-content{
+    padding: 2vw;
+    color: #fff;
+    font-size: 270%;
+    font-family: 'Jersey 15';
+}
+
+#main-structure{
+    width: 100%;
+    background-image: url('../img/background-image.png');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10vh;
+}
