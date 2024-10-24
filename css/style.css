@@ -4,6 +4,11 @@
     font-family: 'Jersey 15';
 }
 
+body{
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
 #header-container{
     background-color: #4B514E;
     height: 7.4vh;
@@ -13,7 +18,9 @@
 }
 
 .header-content{
-    padding: 2vw;
+    padding: 2vw 0 1vw 2vw;
+    display: flex;
+    align-items: center;
     color: #fff;
     font-size: 270%;
     font-family: 'Jersey 15';
@@ -22,8 +29,26 @@
 #main-structure{
     width: 100%;
     background-image: url('../img/background-image.png');
+    background-repeat: repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 10vh;
+}
+
+#hero-banner{
+    margin-top: 15rem;
+    width: 93.75rem;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+ .img-fluid{
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5));
+} 
+.hero-banner-content{
+    background-image: url('../img/load-page.png') ;
+    
 }
