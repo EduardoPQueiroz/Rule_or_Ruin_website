@@ -30,25 +30,43 @@ body{
     width: 100%;
     background-image: url('../img/background-image.png');
     background-repeat: repeat;
-    height: 100vh;
+    height: 100rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     padding: 10vh;
 }
 
 #hero-banner{
-    margin-top: 15rem;
-    width: 93.75rem;
-    height: 25rem;
+    margin-top: 0rem;
+    width: 80vw;
+    height: 120vh;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    background-image: url(../img/load-page.png); 
+    background-size: cover;
+    filter: brightness(0.7);
 }
 
- .img-fluid{
-    background-color: linear-gradient(rgba(0, 0, 0, 0.5));
-} 
-.hero-banner-content{
-    background-image: url('../img/load-page.png') ;
-    
+.overlapping-content img{
+    width: 100%;
+    height: auto;
 }
+/* Esse pedaço era a minha tentativa de conseguir colocar a imagem sobreposta sem tirar o esquema do fluid, 
+Não consegui, se vc quiser tentar vc q manda paizão */
+
+/* .img-fluid{
+    object-fit: cover;
+    z-index: -1;
+} */
+
+/* .overlaping-content{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 200px; 
+    height: auto; 
+    z-index: 1; 
+} */
