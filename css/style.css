@@ -1,4 +1,184 @@
+@keyframes openModal{
+    0% {
+        transform: translateY(-100px);
+    }
+    70%{
+        transform: translateY(40px);
+    }
+    80%{
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeModal{
+    0% {
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(-1000px);
+    }
+
+}   
+
 *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jersey 15';
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+button{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.link-item{
+    text-decoration: none;
+}
+
+header{
+    background-color: #4B514E;
+    border-bottom: 3px #292929 solid;
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+}
+
+.header-content{
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 2% 0 2%;
+    width: 100%;
+    color: #AEAEAE;
+    flex-direction: row;
+    animation-direction: reverse;
+}
+
+.header-content, .header-content-mobile{
+    display: flex;
+}
+
+.header-logo{
+    font-size: 43px;
+}
+
+.header-logo > p{
+    color: #FFF !important;
+}
+
+.nav-item {
+    font-size: 1.8rem;
+    margin-left: 2vw;
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+.header-links-content-pc{
+    display: flex;
+    height: 4.375rem;
+}
+
+.btn-modal{
+    width: 57px;
+    height: 60px;
+}
+
+.header-content-mobile{
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    margin-top: -3em;
+}
+
+.header-links-content-mobile{
+    background-color: #4B514E;
+    color: #FFF;
+    width: 100%;
+    position: sticky;
+}
+
+.header-links-content-mobile, .btn-modal{
+    display: none;
+}
+
+.active{
+    animation: openModal 0.35s linear;
+}
+
+.desactive{
+    animation: closeModal 0.45s linear;
+}
+
+.padding-itens{
+    justify-content: center;
+    align-items: start;
+    padding: 5%;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+    .nav-item {
+        margin-top: 2%;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    .nav-item {
+        margin-top: 2.5%;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav-item{
+        margin-left: 1vw;
+    }
+}
+
+@media only screen and (max-width: 990px){
+    header{
+        border: none;
+    }
+
+    .header-content{
+        padding: 0 2% 0 4%;
+    }
+
+    .header-links-content-pc{
+        display: none;
+    }
+
+    .btn-modal{
+        display: block;
+    }
+
+    .nav-item{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 450px){
+
+}
+
+
+
+/* *{
     margin: 0;
     padding: 0;
     font-family: 'Jersey 15';
@@ -8,24 +188,6 @@ body{
     min-height: 100%;
     overflow-x: hidden;
 }
-
-#header-container{
-    background-color: #4B514E;
-    height: 7.4vh;
-    display: flex;
-    align-items: center;
-    border-bottom: #292929 solid 3px;
-}
-
-.header-content{
-    padding: 2vw 0 1vw 2vw;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    font-size: 270%;
-    font-family: 'Jersey 15';
-}
-
 #main-structure{
     width: 100%;
     background-image: url('../img/background-image.png');
@@ -45,6 +207,7 @@ body{
     align-items: center;
     justify-content: center;
     background-image: url(../img/load-page.png); 
+    z-index: -10px;
     background-size: cover;
     filter: brightness(0.7);
 }
@@ -52,8 +215,8 @@ body{
 .overlapping-content img{
     width: 100%;
     height: auto;
-}
-/* Esse pedaço era a minha tentativa de conseguir colocar a imagem sobreposta sem tirar o esquema do fluid, 
+} 
+Esse pedaço era a minha tentativa de conseguir colocar a imagem sobreposta sem tirar o esquema do fluid, 
 Não consegui, se vc quiser tentar vc q manda paizão */
 
 /* .img-fluid{
