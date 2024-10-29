@@ -1,102 +1,132 @@
-@keyframes openModal{
+@keyframes openModal {
     0% {
         transform: translateY(-100px);
     }
-    70%{
+
+    70% {
         transform: translateY(40px);
     }
-    80%{
+
+    80% {
         transform: translateY(15px);
     }
+
     100% {
         transform: translateX(0);
     }
 }
 
-@keyframes closeModal{
+@keyframes closeModal {
     0% {
         transform: translateY(0px);
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px);
     }
 
-}   
+}
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Jersey 15';
     box-sizing: border-box;
 }
 
-html{
+.nav-item-a, .nav-item-mobile{
+    color: #AEAEAE;
+    text-decoration: none;
+}
+
+html {
     height: 100%;
 }
 
-body{
+body {
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
-button{
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100em;
+    height: 100em;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none; /* Começa escondido */
+}
+
+button {
     text-decoration: none;
     background-color: transparent;
     border: none;
 }
 
-.link-item{
+.link-item {
     text-decoration: none;
 }
 
-header{
+header {
     background-color: #4B514E;
     border-bottom: 3px #292929 solid;
     position: sticky;
     top: 0px;
     width: 100vw;
+    height: 70px;
 }
 
-.header-content{
-    height: 100%;
+.header-content {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     justify-content: space-between;
-    padding: 0 2% 0 2%;
+    padding: 0 0 0 4%;
     width: 100%;
-    color: #AEAEAE;
     flex-direction: row;
     animation-direction: reverse;
 }
 
-.header-content, .header-content-mobile{
+.header-content,
+.header-content-mobile {
     display: flex;
 }
 
-.header-logo{
+.header-logo {
     font-size: 43px;
 }
 
-.header-logo > p{
+.header-logo>p {
     color: #FFF !important;
 }
 
 .nav-item {
     font-size: 1.8rem;
-    margin-left: 2vw;
-    margin-top: 1.5%;
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
     text-align: center;
 }
 
-.header-links-content-pc{
+.header-links-content-pc {
+    width: 100%;
     display: flex;
+    align-items: center !important;
+    justify-content: center;
     height: 4.375rem;
 }
 
-.btn-modal{
+.btn-modal {
     width: 57px;
     height: 60px;
 }
 
-.header-content-mobile{
+.header-content-mobile {
     display: none;
     width: 100%;
     position: absolute;
@@ -104,29 +134,96 @@ header{
     margin-top: -3em;
 }
 
-.header-links-content-mobile{
+.header-links-content-mobile {
+    align-items: center;
     background-color: #4B514E;
     color: #FFF;
     width: 100%;
     position: sticky;
 }
 
-.header-links-content-mobile, .btn-modal{
+.header-links-content-mobile,
+.btn-modal {
     display: none;
 }
 
-.active{
+.active {
     animation: openModal 0.35s linear;
 }
 
-.desactive{
+.desactive {
     animation: closeModal 0.45s linear;
 }
 
-.padding-itens{
+.padding-itens {
     justify-content: center;
     align-items: start;
     padding: 5%;
+}
+
+body {
+    background-image: url('../img/background-image.png');
+    background-size: cover;
+}
+
+#main-structure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    margin-top: 5em;
+}
+
+#main-structure-content {
+    border: #292929 solid 2px;
+    border-radius: 5px;
+}
+
+.img-banner {
+    width: 100%;
+}
+
+#game-description, #how-it-works {
+    color: #FFF;
+    padding: 5em;
+    width: 100%;
+}
+
+.gray-c {
+    background-color: #4B514E;
+}
+
+.gray-b {
+    background-color: #3C403E;
+}
+
+.game-description-content {
+    font-size: 25px;
+    text-align: left;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.how-it-works-title{
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.industrial-week {
+    margin-top: 2em;
+}
+
+.description {
+    width: 35vw;
+}
+
+.crown-img {
+    margin-left: 1em;
+    max-width: 15em;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -144,92 +241,93 @@ header{
 }
 
 @media only screen and (max-width: 1024px) {
-    .nav-item{
+    .nav-item {
         margin-left: 1vw;
     }
 }
 
-@media only screen and (max-width: 990px){
-    header{
+@media only screen and (max-width: 990px) {
+    header {
         border: none;
     }
 
-    .header-content{
+    .header-content {
         padding: 0 2% 0 4%;
     }
 
-    .header-links-content-pc{
+    .header-links-content-pc {
         display: none;
     }
 
-    .btn-modal{
+    .btn-modal {
         display: block;
     }
 
-    .nav-item{
+    .nav-item {
         font-size: 20px;
     }
 
+    #game-description {
+        padding: 3em;
+    }
+
+    .game-description-content {
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .crown-img {
+        margin-top: 2em;
+        margin-left: 0;
+        max-width: 15em !important;
+    }
+
+    .description {
+        width: 100%;
+    }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 650px) {
+    body {
+        background-color: #606764 !important;
+        background-image: url('');
+    }
 
+    /* .banner-img {
+        background-image: ;
+    } */
+
+    #main-structure {
+        padding: 0;
+        margin-top: 3em;
+    }
+
+    #main-structure-content {
+        border: none;
+    }
+
+    .banner-img {
+        overflow: hidden;
+    }
+
+    .img-banner {
+        width: 150% !important;
+        object-fit: cover;
+        margin-left: -28%;
+    }
+
+    .crown-container {
+        display: none;
+    }
+
+    .title {
+        font-size: 30px;
+    }
 }
 
-
-
-/* *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Jersey 15';
-}
-
-body{
-    min-height: 100%;
-    overflow-x: hidden;
-}
-#main-structure{
-    width: 100%;
-    background-image: url('../img/background-image.png');
-    background-repeat: repeat;
-    height: 100rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10vh;
-}
-
-#hero-banner{
-    margin-top: 0rem;
-    width: 80vw;
-    height: 120vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../img/load-page.png); 
-    z-index: -10px;
-    background-size: cover;
-    filter: brightness(0.7);
-}
-
-.overlapping-content img{
-    width: 100%;
-    height: auto;
-} 
-Esse pedaço era a minha tentativa de conseguir colocar a imagem sobreposta sem tirar o esquema do fluid, 
-Não consegui, se vc quiser tentar vc q manda paizão */
-
-/* .img-fluid{
-    object-fit: cover;
-    z-index: -1;
-} */
-
-/* .overlaping-content{
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 200px; 
-    height: auto; 
-    z-index: 1; 
-} */
+@media only screen and (max-width: 450px) {}

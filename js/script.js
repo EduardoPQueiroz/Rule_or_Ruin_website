@@ -3,7 +3,8 @@ const openModal = (header, modal, body) => {
     modal.style.display = 'block'
     modal.classList.add("active")
     modal.classList.remove("desactive")
-
+    body.style.backgroundColor === 'rgba(0, 0, 0, 0.5)'
+    
 }
 
 const closeModal = (header, modal, body) => {
