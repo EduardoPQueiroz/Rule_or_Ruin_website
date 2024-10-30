@@ -34,7 +34,8 @@
     box-sizing: border-box;
 }
 
-.nav-item-a, .nav-item-mobile{
+.nav-item-a,
+.nav-item-mobile {
     color: #AEAEAE;
     text-decoration: none;
 }
@@ -47,6 +48,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+    background: linear-gradient(to bottom, #6ab7f5, #fff)
 }
 
 #overlay {
@@ -57,7 +59,8 @@ body {
     height: 100em;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    display: none; /* Começa escondido */
+    display: none;
+    /* Começa escondido */
 }
 
 button {
@@ -183,7 +186,9 @@ body {
     width: 100%;
 }
 
-#game-description, #how-it-works {
+#game-description,
+#how-it-works,
+#game-creation {
     color: #FFF;
     padding: 5em;
     width: 100%;
@@ -197,18 +202,27 @@ body {
     background-color: #3C403E;
 }
 
-.game-description-content {
+.game-description-content,
+.how-it-was-description {
     font-size: 25px;
-    text-align: left;
     width: 100%;
     justify-content: space-between;
+}
+
+.game-description-content {
+    text-align: left;
+}
+
+.how-it-was-description {
+    text-align: center;
+    width: 60%;
 }
 
 .title {
     font-size: 40px;
 }
 
-.how-it-works-title{
+.how-it-works-title {
     margin-bottom: 2em;
     text-align: center;
 }
@@ -224,6 +238,69 @@ body {
 .crown-img {
     margin-left: 1em;
     max-width: 15em;
+}
+
+.used-technologies-container {
+    border-radius: 10px;
+    background-color: #3D3E3d;
+    width: 100%;
+    color: #B6B6B6;
+    font-size: 40px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.used-technologies-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.grid-item {
+    border-radius: 8px;
+    border: 2px solid #282828;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.grid-item-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    padding-top: 1.5em;
+}
+
+.grid-item-content {
+    width: 5em;
+}
+
+.grid-item-content>p {
+    margin-top: 1em;
+}
+
+.show, .show-item {
+    display: none;
+}
+
+.grid-item-pc:hover {
+    .img-fluid, .item-name{
+        display: none;
+    }
+
+    .grid-item-content{
+        padding: 0;
+    }
+    
+    .show{
+        margin-top: 0;
+        font-size: 16px;
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -271,7 +348,8 @@ body {
         padding: 3em;
     }
 
-    .game-description-content {
+    .game-description-content,
+    .how-it-was-description {
         flex-direction: column;
         text-align: center;
         font-size: 20px;
@@ -290,6 +368,19 @@ body {
     .description {
         width: 100%;
     }
+
+    .how-it-was-description {
+        width: 100%;
+    }
+
+    .hias {
+        word-wrap: normal;
+    }
+
+    .used-technologies-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -297,10 +388,6 @@ body {
         background-color: #606764 !important;
         background-image: url('');
     }
-
-    /* .banner-img {
-        background-image: ;
-    } */
 
     #main-structure {
         padding: 0;
@@ -328,6 +415,76 @@ body {
     .title {
         font-size: 30px;
     }
+
+    #how-it-works {
+        padding: 3em;
+    }
+
+    .game-description-content {
+        padding: 0 2em 0 2em;
+    }
+
+    #game-creation {
+        padding: 5em 0 5em 0;
+    }
+
+    .how-it-was-description {
+        padding: 2em;
+    }
+
+    .used-technologies-container {
+        background-color: #4B514E;
+    }
+
+    .used-technologies-container>p {
+        display: none;
+    }
+
+    .used-technologies-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .grid-item-content {
+        padding: 1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 5rem;
+    }
+
+    .grid-item-content>img {
+        width: 14%;
+    }
+
+    .grid-item-content>p {
+        font-size: 30px;
+    }
+
+    .grid-item {
+        border: none;
+        background-color: #3D3E3D;
+    }
+
+    .show-item {
+        display: block;
+    }
 }
 
-@media only screen and (max-width: 450px) {}
+@media only screen and (max-width: 550px) {
+    .grid-item-content>img {
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .grid-item-content>img {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .grid-item-content>img {
+        width: 25%;
+    }
+}
