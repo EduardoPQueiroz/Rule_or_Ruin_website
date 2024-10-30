@@ -38,7 +38,7 @@ const changeAlignItens = () => {
     const gridItem = document.querySelectorAll('.grid-item')
     const largura = window.innerWidth;
 
-    if( largura < 650){
+    if( largura <= 650){
         for (let i = 0; i<gridItem.length; i++){
             gridItem[i].classList.remove('grid-item-pc')
             gridItem[i].classList.add('grid-item-mobile')
