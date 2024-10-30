@@ -187,7 +187,7 @@ header {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -326,6 +326,31 @@ header {
     }
 }
 
+.description-grid-item-container{
+    display: none;
+}
+
+.grid-item-mobile {
+    height: 5rem; 
+    transition: height 0.1s;
+}
+
+
+.grid-item-mobile:hover{
+    height: 10rem;
+    border: 3px #282828 solid;
+    /* margin-top: -2rem; */
+
+    .item-name, img{
+        display: none;
+    }
+
+    .show{
+        display: block;
+        font-size: 20px;
+    }
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .nav-item {
         margin-top: 2%;
@@ -368,7 +393,7 @@ header {
     }
 
     #game-description {
-        padding: 3em;
+        padding: 1.5em;
     }
 
     .game-description-content,
@@ -509,5 +534,10 @@ header {
 @media only screen and (max-width: 370px) {
     .grid-item-content>img {
         width: 25%;
+    }
+
+    .show{
+        /* display: block; */
+        font-size: 15px !important;
     }
 }
