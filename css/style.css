@@ -45,7 +45,7 @@ html {
     overflow: hidden;
 }
 
-html::before{
+html::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -55,7 +55,7 @@ html::before{
     height: 1000em;
 }
 
-html.overlay-active::before{
+html.overlay-active::before {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -196,7 +196,7 @@ header {
     border-radius: 5px;
 }
 
-#main-structure.overlay-active::after{
+#main-structure.overlay-active::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -211,7 +211,8 @@ header {
 
 #game-description,
 #how-it-works,
-#game-creation {
+#game-creation,
+#thanks {
     color: #FFF;
     padding: 5em;
     width: 100%;
@@ -226,8 +227,11 @@ header {
 }
 
 .game-description-content,
-.how-it-was-description {
-    font-size: 25px;
+.how-it-was-description,
+.used-technologies-container,
+.p-container,
+.team-names {
+    font-size: 35px;
     width: 100%;
     justify-content: space-between;
 }
@@ -238,11 +242,12 @@ header {
 
 .how-it-was-description {
     text-align: center;
-    width: 60%;
+    width: 80%;
+    margin-bottom: 3em;
 }
 
 .title {
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .how-it-works-title {
@@ -266,11 +271,9 @@ header {
 .used-technologies-container {
     border-radius: 10px;
     background-color: #3D3E3d;
-    width: 100%;
     color: #B6B6B6;
-    font-size: 40px;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .used-technologies-content {
@@ -279,9 +282,11 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
+    margin-top: 1em;
 }
 
 .grid-item {
+    width: 100%;
     border-radius: 8px;
     border: 2px solid #282828;
     font-size: 1.5rem;
@@ -292,65 +297,126 @@ header {
 
 .grid-item-content {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     color: #FFF;
     padding-top: 1.5em;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid-item-content {
     width: 5em;
+    height: 15em;
+}
+
+.grid-item-content>img {
+    max-width: 10vw;
 }
 
 .grid-item-content>p {
     margin-top: 1em;
 }
 
-.show, .show-item {
+
+.show {
+    width: 150%;
+    font-size: 100% !important;
+}
+
+.show,
+.show-item {
     display: none;
 }
 
+/*
+Agradecimentos
+*/
+.thanks-content {
+    text-align: center;
+    width: 75%;
+}
+
+.p-container {
+    width: 100%;
+}
+
+.item-name {
+    white-space: nowrap;
+    font-size: 30px;
+}
+
 .grid-item-pc:hover {
-    .img-fluid, .item-name{
+
+    .img-fluid,
+    .item-name {
         display: none;
     }
 
-    .grid-item-content{
+    .grid-item-content {
         padding: 0;
     }
-    
-    .show{
+
+    .show {
         margin-top: 0;
         font-size: 16px;
         display: block;
     }
 }
 
-.description-grid-item-container{
+.description-grid-item-container {
     display: none;
 }
 
 .grid-item-mobile {
-    max-height: 5rem; 
+    max-height: 5rem;
     transition: height 0.1s;
 }
 
 
-.grid-item-mobile:hover{
+.grid-item-mobile:hover {
     min-height: 10rem;
     border: 3px #282828 solid;
-    z-index: 999;
+    z-index: 3;
     margin-top: -2em;
     overflow: hidden;
 
-    .item-name, img{
+    .item-name,
+    img {
         display: none;
     }
 
-    .show{
+    .show {
         display: block;
         font-size: 20px;
     }
+}
+
+.p-container {
+    margin-top: 2em;
+}
+
+#thanks {
+    padding: 4em;
+    flex-direction: column;
+}
+
+.team-description {
+    margin-top: 3em;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.p-thanks-none {
+    display: none;
+}
+
+.team-img {
+    width: 100vw;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -365,11 +431,27 @@ header {
         margin-top: 2.5%;
         font-size: 18px;
     }
+
+    .title{
+        font-size: 40px;
+    }
+
+    .game-description-content,
+    .how-it-was-description,
+    .used-technologies-container,
+    .p-container,
+    .team-names {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
     .nav-item {
         margin-left: 1vw;
+    }
+
+    .title {
+        font-size: 40px;
     }
 }
 
@@ -399,14 +481,22 @@ header {
     }
 
     .game-description-content,
-    .how-it-was-description {
+    .how-it-was-description,
+    .p-container,
+    .team-names {
         flex-direction: column;
         text-align: center;
-        font-size: 20px;
+        font-size: 25px;
+    }
+
+    .game-description-content,
+    .how-it-was-description,
+    .p-container {
+        padding: 2em;
     }
 
     .title {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .crown-img {
@@ -427,9 +517,22 @@ header {
         word-wrap: normal;
     }
 
+    .thanks-title {
+        font-size: 35px !important;
+    }
+
     .used-technologies-content {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .team-description {
+        margin-top: -2em;
+        flex-direction: column-reverse;
+    }
+
+    .team-names {
+        margin-top: 2em;
     }
 }
 
@@ -466,24 +569,36 @@ header {
         font-size: 30px;
     }
 
+    .what-title {
+        color: #CACACA;
+    }
+
     #how-it-works {
         padding: 3em;
     }
 
-    .game-description-content {
-        padding: 0 2em 0 2em;
+    .how-it-works-content {
+        padding: 0 2em 0 2em !important;
     }
 
+    .game-description-content {
+        padding: 0 3em 0 3em;
+    }
+
+
     #game-creation {
-        padding: 5em 0 5em 0;
+        padding: 5em 2em 5em 2em;
     }
 
     .how-it-was-description {
         padding: 2em;
+        margin-bottom: 0;
     }
 
     .used-technologies-container {
         background-color: #4B514E;
+        width: 120%;
+        padding: 0;
     }
 
     .used-technologies-container>p {
@@ -493,6 +608,8 @@ header {
     .used-technologies-content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding: 1em;
+        margin-top: 0;
     }
 
     .grid-item-content {
@@ -504,7 +621,7 @@ header {
     }
 
     .grid-item-content>img {
-        width: 14%;
+        width: 12%;
     }
 
     .grid-item-content>p {
@@ -519,26 +636,82 @@ header {
     .show-item {
         display: block;
     }
+
+    .p-container {
+        width: 100%;
+    }
+
+    .thanks-content {
+        text-align: center;
+    }
+
+    .team-img {
+        /* min-width: 70vw; */
+        margin-bottom: 4em;
+    }
+
+    .show {
+        width: 100% !important;
+        font-size: 100% !important;
+    }
 }
 
 @media only screen and (max-width: 550px) {
     .grid-item-content>img {
         width: 15%;
     }
+
+    .show {
+        font-size: 85% !important;
+    }
 }
 
 @media only screen and (max-width: 450px) {
+
     .grid-item-content>img {
         width: 20%;
+    }
+
+    .p-thanks-none {
+        font-size: 25px;
+        display: block;
+    }
+
+    .p-thanks-pc {
+        display: none;
+    }
+
+    .game-description-content,
+    .how-it-was-description,
+    .p-container,
+    .team-names {
+        font-size: 20px;
+    }
+
+    .thanks-content {
+        text-align: center;
+    }
+
+    .team-img {
+        min-width: 70vw;
+    }
+
+    .used-technologies-container {
+        padding: 1.5em;
     }
 }
 
 @media only screen and (max-width: 350px) {
+    .thanks-content {
+        text-align: center;
+        width: 100%;
+    }
+
     .grid-item-content>img {
         width: 25%;
     }
 
-    .show{
+    .show {
         font-size: 18px !important;
     }
 }
@@ -548,11 +721,18 @@ header {
         width: 30%;
     }
 
-    .item-name{
+    .item-name {
         font-size: 20px !important;
     }
 
-    .show{
+    .show {
         font-size: 15px !important;
+    }
+
+
+
+
+    .thanks-title {
+        font-size: 30px !important;
     }
 }
