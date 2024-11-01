@@ -342,13 +342,41 @@ Agradecimentos
     width: 100%;
 }
 
+.qui-o {
+    white-space: nowrap;
+}
+
 .item-name {
     white-space: nowrap;
     font-size: 30px;
 }
 
-.grid-item-pc:hover {
+.java:hover{
+    border-color: #E84135;
+}
 
+.sql:hover{
+    border-color: #FC490B;
+}
+
+.maui:hover{
+    border-color: #512BD3;
+}
+
+.js:hover{
+    border-color: #FFDF00;
+}
+
+.html:hover{
+    border-color: #FF9100;
+}
+
+.css:hover{
+    border-color: #2D84CA;
+}
+
+.grid-item-pc:hover {
+    
     .img-fluid,
     .item-name {
         display: none;
@@ -371,13 +399,12 @@ Agradecimentos
 
 .grid-item-mobile {
     max-height: 5rem;
-    transition: height 0.1s;
 }
 
 
 .grid-item-mobile:hover {
     min-height: 10rem;
-    border: 3px #282828 solid;
+    border: 3px #A5A5A5 solid;
     z-index: 3;
     margin-top: -2em;
     overflow: hidden;
@@ -535,6 +562,16 @@ Agradecimentos
         margin-top: 2em;
     }
 }
+
+@media only screen and (max-width: 770px) {
+    .grid-item-pc:hover {
+        .show{
+            font-size: 20px !important;
+            width: 90%;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 650px) {
     body {
