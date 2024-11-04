@@ -107,13 +107,12 @@ function aboutSubjective(element) {
         const index = GETElement(element);
         titulo.innerHTML = titulos[index - 1]
         texto.innerHTML = conteudo[index - 1]
-
-        top.classList.remove('desactiveSubjective', 'top-none')
-        top.classList.add('activeSubjective')
-        
+        top.classList.remove('top-none');
+        // top.classList.remove('desactiveSubjective')
+        // top.classList.add('activeSubjective')
         setTimeout(() => {
             activateOverlay(elements);
-        }, 350)
+        }, 400)
 
     }
     else {
