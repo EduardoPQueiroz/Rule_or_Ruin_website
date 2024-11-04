@@ -27,6 +27,26 @@
 
 }
 
+@keyframes openSubjective {
+    0% {
+        transform: translateX(1000px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes closeSubjective {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(1000px);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -159,6 +179,14 @@ header {
 
 .desactive {
     animation: closeModal 0.45s linear;
+}
+
+.activeSubjective{
+    animation: openSubjective 0.5s linear;
+}
+
+.desactiveSubjective{
+    animation: closeSubjective 0.5s linear;
 }
 
 .padding-itens {
@@ -860,6 +888,10 @@ Agradecimentos
 
     .about-ds-title, .how-it-works-title{
         margin-top: 2em;
+    }
+    
+    .subjective-container-esp{
+        margin-top: .8em !important;
     }
     
 }

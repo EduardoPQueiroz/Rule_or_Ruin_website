@@ -105,14 +105,23 @@ function aboutSubjective(element) {
         ];
 
         const index = GETElement(element);
-        titulo.innerHTML = titulos[index-1]
-        texto.innerHTML = conteudo[index-1]
+        titulo.innerHTML = titulos[index - 1]
+        texto.innerHTML = conteudo[index - 1]
         top.classList.remove('top-none');
-        activateOverlay(elements);
+        top.classList.remove('desactiveSubjective')
+        top.classList.add('activeSubjective')
+        setTimeout(() => {
+            activateOverlay(elements);
+        }, 400)
+
     }
-    else{
-        top.classList.add('top-none');
+    else {
+        top.classList.remove('activeSubjective')
+        top.classList.add('desactiveSubjective')
         desactivateOverlay(elements)
+        setTimeout(() => {
+            top.style.display = 'none'
+        }, 500)
     }
 
 
