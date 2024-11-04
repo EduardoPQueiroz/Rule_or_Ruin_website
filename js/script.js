@@ -120,8 +120,8 @@ function aboutSubjective(element) {
         top.classList.add('desactiveSubjective')
         desactivateOverlay(elements)
         setTimeout(() => {
-            top.style.display = 'none'
-        }, 500)
+            top.classList.add('top-none');
+        }, 490)
     }
 
 
