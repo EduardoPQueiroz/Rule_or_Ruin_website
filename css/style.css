@@ -201,6 +201,7 @@ header {
     position: absolute;
     width: 100%;
     padding: 2em;
+    overflow: hidden;
 }
 
 .title-top-subjective{
@@ -653,6 +654,7 @@ Agradecimentos
 
     .nav-item {
         font-size: 20px;
+        width: 100%;
     }
 
     #game-description {
