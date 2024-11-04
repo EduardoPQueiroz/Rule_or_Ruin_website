@@ -16,11 +16,22 @@
 </head>
 
 <body>
-    <div id="top"></div>
+    <div id="top-header"></div>
+    <div id="top" class="top-none">
+        <div class="title-top-subjective d-flex flex-row">
+            <p class="content-title"></p>
+            <button onclick="aboutSubjective(this)" class="btn-close-sub">
+                <p>-</p>
+            </button>
+        </div>
+        <div class="text-subs-subjective d-flex align-items-center justify-content-center">
+            <p class="content-text"></p>
+        </div>
+    </div>
     <header>
         <div class="header-content align-items-center">
             <div class="header-logo flex-row">
-                <a href="#top">
+                <a href="#top-header">
                     <img src="img/Rule-or-ruin.png" class="img-fluid" alt="">
                 </a>
             </div>
@@ -36,7 +47,7 @@
                     </a>
                 </div>
                 <div class="nav-item">
-                    <a href="#" class="nav-item-a">
+                    <a href="#about-ds" class="nav-item-a">
                         <p>Desenvolvimento de sistemas</p>
                     </a>
                 </div>
@@ -64,7 +75,7 @@
                         <p>Como foi a criação do game</p>
                 </div>
                 <div class="nav-item">
-                    <a href="#" class="nav-item-mobile">
+                    <a href="#about-ds" class="nav-item-mobile">
                         <p>Desenvolvimento de sistemas</p>
                     </a>
                 </div>
@@ -105,7 +116,8 @@
             </section>
             <section id="how-it-works" class="gray-b d-flex align-items-center flex-column">
                 <p class="title how-it-works-title">Como o jogo funciona ?</p>
-                <div class="game-description-content how-it-works-content d-flex align-items-center justify-content-around">
+                <div
+                    class="game-description-content how-it-works-content d-flex align-items-center justify-content-around">
                     <div class="description d-flex align-items-center flex-column">
                         <div class="what-is">
                             <p>Trata-se de um jogo de escolhas que se passa na Alemanhã durante diferentes anos</p>
@@ -190,13 +202,98 @@
                     </div>
                 </div>
             </section>
+            <section id="about-ds">
+                <div class="about-ds-content d-flex flex-column align-items-center">
+                    <div class="about-ds-title">
+                        <img src="img/about-ds.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="what-is-ds d-flex align-items-center flex-column">
+                        <p class="title">O que é o curso?</p>
+                        <div class="content-ds-about-over">
+                            <p>O curso de Desenvolvimento de Sistemas da ETEC Horácio Augusto da Silveira ensina os
+                                alunos a
+                                criar e manter programas e aplicativos para diferentes dispositivos.
+                            </p>
+                            <p>Durante o curso, os
+                                estudantes aprendem a programar e desenvolver bancos de dados, além de criar sites e
+                                aplicativos que atendam às necessidades do mercado.
+                            </p>
+                            <p>As aulas apresentam o conceito de
+                                programação, utilizando linguagens como C, JavaScript e SQL.
+
+                                Também são abordadas para os alunos boas práticas de programação. </p>
+                            <p>Além disso, o curso prepara os alunos para
+                                trabalhar em
+                                equipe, desenvolvendo habilidades essenciais para resolver problemas.</p>
+                        </div>
+                        <button id="read" onclick="openHidden()">Ler mais</button>
+                    </div>
+                    <div class="subjectives-ds d-flex flex-column align-items-center">
+                        <p class="title">Quais são as materias abordadas no curso ?</p>
+                        <div class="subjective-container-esp d-flex align-items-center">
+                            <button id="text-subjective-button" class="none" onclick="aboutSubjective(this)">
+                                <img src="img/btnModal.png" alt="" class="img-fluid">
+                            </button>
+                            <div class="text-content-subjective 0">
+                                <p>Programação Web<span class="description-text">: Os alunos aprendem a usar a linguagem
+                                        de programação Java para criar
+                                        APIs, que são como pontes que permitem que diferentes programas se comuniquem
+                                        entre
+                                        si,
+                                        utilizando o framework Spring Boot.</span>
+                                </p>
+                            </div>
+                            <img src="img/java-icon.png" alt="" class="img-fluid s-img">
+                        </div>
+                        <div class="subjective-container-esp d-flex align-items-center">
+                            <button id="text-subjective-button" class="none">
+                                <img src="img/btnModal.png" alt="" class="img-fluid" onclick="aboutSubjective(this)">
+                            </button>
+                            <div class="text-content-subjective 1">
+                                <p>Desenvolvimento de Sistemas<span class="description-text">: Nesta matéria, os
+                                        estudantes aprendem a resolver
+                                        problemas e criar soluções usando a linguagem Python, que é fácil de entender e
+                                        muito usada para desenvolver programas.</span></p>
+                            </div>
+                            <img src="img/icons-python.png" alt="" class="img-fluid s-img">
+                        </div>
+                        <div class="subjective-container-esp d-flex align-items-center">
+                            <button id="text-subjective-button" class="none">
+                                <img src="img/btnModal.png" alt="" class="img-fluid" onclick="aboutSubjective(this)">
+                            </button>
+                            <div class="text-content-subjective 2">
+                                <p>Programação de Aplicativos Mobile<span class="description-text">: Os alunos usam
+                                        uma ferramenta chamada .NET
+                                        MAUI para criar aplicativos para celulares e tablets. Eles aprendem a fazer
+                                        aplicações que funcionam bem em diferentes tipos de dispositivos móveis.</span>
+                                </p>
+                            </div>
+                            <img src="img/maui-img.png" alt="" class="img-fluid s-img">
+                        </div>
+                        <div class="subjective-container-esp d-flex align-items-center">
+                            <button id="text-subjective-button" class="none" onclick="aboutSubjective(this)">
+                                <img src="img/btnModal.png" alt="" class="img-fluid">
+                            </button>
+                            <div class="text-content-subjective 3">
+                                <p>Banco de Dados<span class="description-text">: Esta disciplina ensina como organizar
+                                        e gerenciar informações em
+                                        bancos de dados, utilizando uma linguagem chamada SQL para buscar, adicionar e
+                                        modificar dados de forma eficiente.</span></p>
+                            </div>
+                            <img src="img/sql-icon.png" alt="" class="img-fluid s-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="thanks" class="gray-c d-flex align-items-center">
                 <div class="thanks-content d-flex align-items-center flex-column">
                     <p class="title thanks-title">Agradecimentos</p>
                     <div class="p-container">
-                        <p class="p-thanks p-thanks-pc">Agradecemos ao melhor professor da escola! Sua dedicação faz toda a
-                            diferença. Abraços, guilherme.</p>
-                        <p class="p-thanks p-thanks-none">Agradecemos ao melhor professor da escola! Abraços, guilherme.</p>
+                        <p class="p-thanks p-thanks-pc">Agradecemos ao melhor professor da escola! Sua dedicação faz
+                            toda a
+                            diferença. Abraços, Guilherme.</p>
+                        <p class="p-thanks p-thanks-none">Agradecemos ao melhor professor da escola! Abraços, Guilherme.
+                        </p>
                     </div>
                 </div>
                 <div class="team-description d-flex">

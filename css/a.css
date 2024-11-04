@@ -85,7 +85,7 @@ header {
     top: 0px;
     width: 100vw;
     height: 70px;
-    z-index: 9;
+    z-index: 999;
     filter: none !important;
 }
 
@@ -167,43 +167,7 @@ header {
     padding: 5%;
 }
 
-#top{
-    z-index: 999;
-    background-color: #2E2E2E;
-    position: absolute;
-    width: 100%;
-    padding: 2em;
-}
 
-.title-top-subjective{
-    padding: 0 1em 0 1em;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.btn-close-sub{
-    margin-top: -.4em;
-    font-size: 60px;
-}
-
-.title-top-subjective, .btn-close-sub{
-    color: #fff;
-}
-
-.text-subs-subjective{
-    text-align: center;
-    width: 100%;
-    padding: 0 2em 2em 2em;
-    color: #BEB9B9;
-}
-
-.title-top-subjective, .text-subs-subjective{
-    font-size: 25px;
-}
-
-.top-none{
-    display: none;
-}
 
 #main-structure {
     width: 100%;
@@ -308,7 +272,6 @@ header {
     color: #B6B6B6;
     text-align: center;
     padding: 3rem;
-    width: 100%;
 }
 
 .used-technologies-content {
@@ -705,19 +668,18 @@ Agradecimentos
     }
 
     .none {
-        display: flex;
+        display: block;
     }
 
     .text-content-subjective {
         text-align: center;
-        width: 50%;
+        width: 80%;
         /* margin-left: 4em; */
-        font-size: 20px;
         margin-top: .5em;
     }
 
     .subjective-container-esp img {
-        max-width: 12vw;
+        max-width: 10vw;
     }
 }
 
@@ -857,11 +819,6 @@ Agradecimentos
         width: 100% !important;
         font-size: 100% !important;
     }
-
-    .about-ds-title, .how-it-works-title{
-        margin-top: 2em;
-    }
-    
 }
 
 @media only screen and (max-width: 550px) {
@@ -902,10 +859,6 @@ Agradecimentos
         font-size: 20px;
     }
 
-    .used-technologies-container {
-        width: 100% !important;
-    }
-
     .thanks-content {
         text-align: center;
     }
@@ -916,22 +869,6 @@ Agradecimentos
 
     #read {
         font-size: 25px;
-    }
-
-    #about-ds {
-        padding: 3em !important;
-    }
-
-    .title-top-subjective{
-        font-size: 20px;
-    }
-
-    .text-subs-subjective{
-        font-size: 120%;
-    }
-
-    .btn-close-sub{
-        font-size: 50px;
     }
 }
 
@@ -946,7 +883,7 @@ Agradecimentos
     }
 
     .used-technologies-container {
-        padding: .5em;
+        padding: 1em;
     }
 
     .show {
@@ -958,34 +895,19 @@ Agradecimentos
     }
 
     #main-structure,
-    #about-ds{
-        padding: 4em !important;
-    }
-
-    .text-content-subjective{
-        margin-top: 1em;
-        font-size: 15px;
-    }
-
-    .text-subs-subjective{
-        width: 110%;
-        margin-left: -.8em;
-        font-size: 110%;
-    }
-
-    .btn-close-sub{
-        font-size: 40px;
+    #about-ds {
+        padding: 5em !important;
     }
 }
 
 @media only screen and (max-width: 280px) {
 
-    .used-technologies-container {
-        padding: 1em;
-    }
-
     .grid-item-content>img {
         width: 30%;
+    }
+
+    .used-technologies-container {
+        padding: 2em;
     }
 
     .item-name {
