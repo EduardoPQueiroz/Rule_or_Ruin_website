@@ -110,10 +110,10 @@ function aboutSubjective(element) {
 
         top.classList.remove('desactiveSubjective', 'top-none')
         top.classList.add('activeSubjective')
-        // top.classList.remove('top-none');
+        
         setTimeout(() => {
             activateOverlay(elements);
-        }, 400)
+        }, 350)
 
     }
     else {
