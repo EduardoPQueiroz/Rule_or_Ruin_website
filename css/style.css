@@ -29,11 +29,11 @@
 
 @keyframes openSubjective {
     0% {
-        transform: translateX(1000px);
+        transform: translateY(1000px);
     }
 
     100% {
-        transform: translateX(0px);
+        transform: translateY(0px);
     }
 }
 
