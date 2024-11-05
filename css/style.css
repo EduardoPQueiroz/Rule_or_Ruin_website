@@ -29,7 +29,7 @@
 
 @keyframes openSubjective {
     0% {
-        transform: translateY(1000px);
+        transform: translateY(-1000px);
     }
 
     100% {
@@ -183,7 +183,7 @@ header {
 }
 
 .desactive {
-    animation: closeModal 0.45s linear;
+    animation: closeModal 0.35s linear;
 }
 
 .activeSubjective{
