@@ -109,10 +109,10 @@ function aboutSubjective(element) {
         texto.innerHTML = conteudo[index - 1]
         top.classList.remove('top-none');
         top.classList.remove('desactiveSubjective')
-        // top.classList.add('activeSubjective')
+        top.classList.add('activeSubjective')
         setTimeout(() => {
             activateOverlay(elements);
-        }, 400)
+        }, 300)
 
     }
     else {

@@ -182,7 +182,9 @@ header {
 }
 
 .activeSubjective{
-    animation: openSubjective 0.5s linear;
+    animation: openSubjective 0.35s linear;
+    overflow: hidden;
+    position: absolute;
 }
 
 .desactiveSubjective{
