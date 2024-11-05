@@ -922,6 +922,10 @@ Agradecimentos
 
 @media only screen and (max-width: 450px) {
 
+    #hero-banner-container{
+        margin-top: -3em;
+    }
+
     .grid-item-content>img {
         width: 20%;
     }
