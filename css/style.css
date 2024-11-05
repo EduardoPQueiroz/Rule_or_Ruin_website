@@ -61,6 +61,11 @@
 }
 
 html {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     overflow: hidden;
 }
@@ -85,6 +90,10 @@ body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     scroll-behavior: smooth;
 }
 
@@ -916,6 +925,10 @@ Agradecimentos
 }
 
 @media only screen and (max-width: 450px) {
+
+    #hero-banner-container{
+        margin-top: -2em;
+    }
 
     .grid-item-content>img {
         width: 20%;
